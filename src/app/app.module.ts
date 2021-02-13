@@ -11,10 +11,11 @@ import { ProductItemComponent } from './component/product-item/product-item.comp
 import { CartComponent } from './component/cart/cart.component';
 import { CartItemComponent } from './component/cart-item/cart-item.component';
 import { ModalComponent } from './component/modal/modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+
 
 //external
 import { NgxPayPalModule } from 'ngx-paypal';
-import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -34,7 +35,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     NgxPayPalModule,
     NgbModule,
-    NgxSpinnerModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

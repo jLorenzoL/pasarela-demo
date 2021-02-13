@@ -75,11 +75,14 @@ export class CartComponent implements OnInit {
       onClientAuthorization: (data) => {
         console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
         // this.showSuccess = true;
-        this.openModal(
-          data.purchase_units[0].items,
-          data.purchase_units[0].amount.value,
-        );
-        this.emptyCart();
+        if(data.status == 'COMPLETED'){
+          this.openModal(
+            data.purchase_units[0].items,
+            data.purchase_units[0].amount.value,
+          );
+          this.emptyCart();
+        }
+        
       },
       onCancel: (data, actions) => {
         console.log('OnCancel', data, actions);
