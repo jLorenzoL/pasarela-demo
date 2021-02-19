@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
+  habilitarCart : boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+    this.habilitarCart = true;
   }
 
 }
